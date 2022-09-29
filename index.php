@@ -1,5 +1,5 @@
 <?php
-session_start();
+include 'php.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@ session_start();
     <title>Menu</title>
 </head>
 <body>
-    <form method="post" action="php.php">
+    <form method="post">
         <hr>
         Valor 1<input type="text" name="valor1">
         <br>
@@ -26,6 +26,9 @@ session_start();
         <br>
         <input type="submit" value="Enviar">
         <input type="reset" value="Apaga">
+        <hr>
+        <br>
+        <input type="text" value="<?php echo $total ?>" style="<?php echo $cor ?>" placeholder="Resultado">
     </form>
 </body>
 </html>
